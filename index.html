@@ -180,10 +180,10 @@
     <div class="music-background-icon" onclick="backgroundAudio()">🎵</div>
 
     <script>
-        // Lấy phần tử audio
+        
         const audioBackground = document.getElementById('audioBackground');
 
-        // Kích hoạt tự động phát âm thanh sau khi trang tải
+      
         window.addEventListener('load', () => {
             audioBackground.play().catch(error => {
                 console.warn('Tự động phát bị chặn bởi trình duyệt. Yêu cầu tương tác từ người dùng.');
@@ -191,11 +191,11 @@
         });
 
         audioBackground.addEventListener('ended', () => {
-            audioBackground.currentTime = 0; // Đặt thời gian phát về 0
-            audioBackground.play(); // Phát lại
+            audioBackground.currentTime = 0; 
+            audioBackground.play(); 
         });
 
-        // Hàm tạm dừng/phát lại âm thanh khi nhấn vào biểu tượng
+        
         function backgroundAudio() {
             if (audioBackground.paused) {
                 audioBackground.play();
@@ -225,9 +225,7 @@
             audioPlayer.pause();
         }
 
-        // function handleCardClick() {
-        //     showImageModal();
-        // }
+        
 
         function triggerFireworks() {
             const duration = 10 * 1000;
